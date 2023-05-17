@@ -1,0 +1,20 @@
+[project]
+name = "firewall-cleaner"
+version = "0.1.0"
+description = "A tool to analyse firewall rules to determine what can be consolidated."
+authors = [
+    { name = "Christian Witts", email = "cwitts@gmail.com" }
+]
+dependencies = ["click~=8.1.3", "python-hcl2~=4.3.1"]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+
+[project.scripts]
+firewall_cleaner = "src.firewall_cleaner:firewall_cleaner"
