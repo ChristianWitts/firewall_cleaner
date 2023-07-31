@@ -16,5 +16,9 @@ build-backend = "hatchling.build"
 [tool.rye]
 managed = true
 
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+
 [project.scripts]
 firewall_cleaner = "src.firewall_cleaner:firewall_cleaner"
